@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(196, 192, 192);
+}
+.Totalpage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.Room__info{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    align-items: center;
+    border: 2px solid black;
+    border-left: 10px solid blue;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    width: fit-content;
+    flex-direction: column;
+    height: fit-content;
+    box-shadow: 0px 0px 5px black;
+}
+
+.RoomLinkcontainer{
+    border: 1px solid grey;
+    background-color: lightgreen;
+    font-size: 15px;
+    width: 200px;
+    overflow-x: scroll;
+    padding: 10px;
+    margin: 5px;
+}
+
+#copy{
+    padding: 10px;
+    background-color: blue;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 15px !important;
+}
+
+.RoomLinkcontainer::-webkit-scrollbar{
+    display: none;
+}
+
+.container{
+    width: 50vw;
+    height:80vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 50px auto;
+    box-shadow: 0px 0px 10px rgb(39, 38, 38);
+    padding: 10px;
+}
+
+.info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    box-shadow: 0px 0px 10px grey;
+    border-left: 15px solid grey ;
+    border-right: 15px solid grey ;
+}
+
+
+
+#NAME{
+    font-size: 25px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+#chat{
+    flex: 0.95;
+    overflow-y: scroll;
+}
+#chat::-webkit-scrollbar{
+    display: none;
+}
+
+.message_info_others{
+    border: none;
+    width: fit-content;
+    background-color: rgb(170, 169, 169);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px 10px 10px 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.message_info_you{
+    border: none;
+    width: fit-content;
+    background-color: rgb(13, 221, 13);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px 10px 10px 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+#name{
+    font-weight:bold;
+    font-size: 16px;
+}
+#message_content{
+    margin-top: 5px;
+}
+#feedback{
+    font-family: cursive;
+    font-size: 13px;
+    font-weight: 800;
+    color: grey;
+    padding: 5px;
+    border-radius: 10px;
+}
+#connectionAndDisconnection{
+    font-family: cursive;
+    font-size: 13px;
+    font-weight: 800;
+    color: grey;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 5px;
+}
+.messaging{
+    flex: 0.05;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid grey;
+    padding-top: 10px;
+}
+#message{
+    min-width: 200px;
+    height: 20px;
+    padding: 5px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+#submit{
+    padding: 7px;
+    width: fit-content;
+    background-color: blue;
+    cursor:pointer;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+
+
+@media (max-width:565px) {
+    .container{
+        width: 300px;
+    }
+}

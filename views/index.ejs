@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Application</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="Totalpage">
+        <div class="Room__info">
+            <i id="Close" class="fa fa-times-circle"
+                style="color: red;align-self: flex-end;padding: 5px;cursor: pointer;font-size: 20px;"></i>
+            <!-- <p id="room_name">Room Name : <strong><%= RoomName %></strong></p> -->
+            <p id="room_name">Room Name : <strong>Vampiers</strong></p>
+            <br>
+            <input type="text" style="font-weight: bold;" id="room_link" class="RoomLinkcontainer" readonly ></input>
+            <button id="copy"><i class="fa fa-copy"></i> Copy</button>
+            <br>
+        </div>
+        <div class="container">
+            <div class="info">
+                <p id="NAME"></p>
+            </div>
+            <div id="chat"></div>
+            <div id="feedback"></div>
+            <div id="connectionAndDisconnection"></div>
+            <div class="messaging">
+                <form id="FORM">
+                    <input type="text" id="message" placeholder="Send a Message" required>
+                    <button type="submit" id="submit"><i class="fa fa-paper-plane"></i> Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/chat.js"></script>
+
+</html>
