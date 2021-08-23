@@ -34,9 +34,12 @@ var message = document.getElementById("message")
 var Form = document.getElementById("FORM")
 
 
+var names = []
+
 socket.emit('joined',{Person:name})
 
 socket.on('joined',(data)=>{
+    names.push(data.Person)
     document.getElementById('connectionAndDisconnection').innerHTML = `${data.Person} joined the chat...`
     setTimeout(()=>{
         document.getElementById('connectionAndDisconnection').innerHTML =""
@@ -44,8 +47,8 @@ socket.on('joined',(data)=>{
 })
 
 
-socket.on('disconnected',()=>{
-    document.getElementById('connectionAndDisconnection').innerHTML = `Someone disconnected ....`
+socket.on('disconnected',(data)=>{
+    document.getElementById('connectionAndDisconnection').innerHTML = `${data.Person} disconnected ....`
     setTimeout(()=>{
         document.getElementById('connectionAndDisconnection').innerHTML =""
     },2500)

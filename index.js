@@ -19,9 +19,16 @@ app.get('/:id',(req,res)=>{
 const io=socket(app.listen(3000)) ;
 
 
+var ids=[];
+var names =[];
+
 io.on('connection',(socket)=>{
     
+
+    ids.push(socket.id)
+
     socket.on('joined',(data)=>{
+        names.push(data.Person)
         socket.broadcast.emit('joined',data)
     })
   
@@ -35,7 +42,7 @@ io.on('connection',(socket)=>{
 
     
     socket.on('disconnect',()=>{
-        socket.broadcast.emit('disconnected')
+        socket.broadcast.emit('disconnected',{Person:names[ids.indexOf(socket.id)]})
     })
     
 
