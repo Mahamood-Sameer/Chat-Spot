@@ -2,8 +2,8 @@
   "name": "chat-application",
   "version": "1.0.0",
   "description": "A simple Chat Application",
-  "homepage": "http://Mahamood-Sameer.github.io/",
   "main": "index.js",
+  "homepage": "http://Mahamood-Sameer.github.io/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "predploy" : "npm run build",
