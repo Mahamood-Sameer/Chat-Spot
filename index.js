@@ -8,11 +8,11 @@ app.set("view-engine",'ejs')
 
 app.use(express.static('public'))
 
-app.get('/',(req,res)=>{
+app.get('/Chat-Spot',(req,res)=>{
     res.render('Room.ejs')
 })
 
-app.get('/:id',(req,res)=>{
+app.get('/Chat-Spot/:id',(req,res)=>{
     res.render('index.ejs',{RoomName:req.params.id})
 })
 
